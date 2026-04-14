@@ -6,15 +6,16 @@
     android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#22E0CE"
+    android:background="#36343A"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SokoGarden"
-        android:textSize="38sp"
+        android:text=" ✨SokoGarden✨ "
+        android:fontFamily="cursive"
+        android:textSize="42sp"
         android:textAlignment="center"
         android:background="@drawable/shape"
 
@@ -32,7 +33,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
             android:padding="10dp"
-            android:text="SIGNUP"
+            android:text="👤 SIGNUP"
             android:textColor="#03A9F4"
             android:textSize="25sp"
             android:backgroundTint="#222424"
@@ -45,7 +46,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="8dp"
             android:padding="10dp"
-            android:text="SIGNIN"
+            android:text="🧑‍✈️ SIGNIN"
             android:textColor="#03A9F4"
             android:textSize="25sp"
             android:backgroundTint="#222424"
