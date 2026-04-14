@@ -1,56 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#36343A"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" ✨SokoGarden✨ "
-        android:fontFamily="cursive"
-        android:textSize="42sp"
-        android:textAlignment="center"
-        android:background="@drawable/shape"
-
-        android:textStyle="italic|bold"
-        android:textColor="#5C19D5"/>
-<!--    Below is a linear layout that aligns contents horizontally-->
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context=".MainActivity">
 
-        <Button
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" ✨SokoGarden✨ "
+            android:fontFamily="cursive"
+            android:textSize="48sp"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:background="@drawable/shape"
+            android:elevation="8dp"
+            android:textStyle="italic|bold"
+            android:textColor="@color/whiteTextColor"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="8dp"
-            android:padding="10dp"
-            android:text="👤 SIGNUP"
-            android:textColor="#03A9F4"
-            android:textSize="25sp"
-            android:backgroundTint="#222424"
-            android:id="@+id/signupBtn"/>
+            android:text="Fresh from our garden to your doorstep"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
 
-
-        <Button
-            android:layout_width="wrap_content"
+        <!-- Features Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="8dp"
-            android:padding="10dp"
-            android:text="🧑‍✈️ SIGNIN"
-            android:textColor="#03A9F4"
-            android:textSize="25sp"
-            android:backgroundTint="#222424"
-            android:id="@+id/signinBtn"/>
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card 1: Buying -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primaryLightColor"
+                app:cardBackgroundColor="@color/surfaceColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        app:tint="@color/primaryColor"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Fresh Produce"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primaryTextColor"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get organic fruits and vegetables directly from local growers."
+                            android:textSize="14sp"
+                            android:textColor="@color/secondaryTextColor"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: Selling -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primaryLightColor"
+                app:cardBackgroundColor="@color/surfaceColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_input_add"
+                        app:tint="@color/accentBlue"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sell Your Harvest"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primaryTextColor"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Easily list your surplus garden goods and reach nearby customers."
+                            android:textSize="14sp"
+                            android:textColor="@color/secondaryTextColor"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 3: Community -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primaryLightColor"
+                app:cardBackgroundColor="@color/surfaceColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_menu_mylocation"
+                        app:tint="@color/accentGold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Local Community"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primaryTextColor"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Support local farmers and promote sustainable living in your area."
+                            android:textSize="14sp"
+                            android:textColor="@color/secondaryTextColor"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Buttons Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signupBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:text="SIGNUP"
+                app:cornerRadius="12dp"
+                android:textColor="@color/whiteTextColor"
+                android:backgroundTint="@color/primaryColor"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signinBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:text="SIGNIN"
+                app:cornerRadius="12dp"
+                android:textColor="@color/whiteTextColor"
+                android:backgroundTint="@color/accentBlue"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

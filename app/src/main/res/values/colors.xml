@@ -2,4 +2,29 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Palette (Fresh Garden Green) -->
+    <color name="primaryColor">#2E7D32</color>
+    <color name="primaryLightColor">#E8F5E9</color> <!-- Very light green for cards/backgrounds -->
+    <color name="primaryDarkColor">#1B5E20</color>
+
+    <!-- Secondary Palette -->
+    <color name="secondaryColor">#8BC34A</color>
+    <color name="secondaryLightColor">#DCEDC8</color>
+    <color name="secondaryDarkColor">#558B2F</color>
+
+    <!-- Background and Surface -->
+    <color name="backgroundColor">#FAFAFA</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="errorColor">#D32F2F</color>
+
+    <!-- Text Colors -->
+    <color name="primaryTextColor">#1B5E20</color> <!-- Dark green text for titles -->
+    <color name="secondaryTextColor">#455A64</color>
+    <color name="whiteTextColor">#FFFFFF</color>
+    <color name="hintColor">#546E7A</color> <!-- Darker, more visible hint color -->
+
+    <!-- Professional Accent -->
+    <color name="accentBlue">#1565C0</color>
+    <color name="accentGold">#FBC02D</color>
 </resources>

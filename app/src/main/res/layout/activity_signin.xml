@@ -6,10 +6,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#423559"
+    android:background="@color/backgroundColor"
     android:layout_height="match_parent"
     tools:context=".Signin">
-
 
     <TextView
         android:layout_width="match_parent"
@@ -19,82 +18,110 @@
         android:textSize="47sp"
         android:textAlignment="center"
         android:background="@drawable/shape"
-
+        android:padding="20dp"
         android:textStyle="italic|bold"
-        android:textColor="#5C19D5"/>
-<!--    Below is a card view-->
-    <androidx.cardview.widget.CardView
+        android:elevation="4dp"
+        android:textColor="@color/whiteTextColor"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signinCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:contentPadding="10dp">
-<!--        Below is a linear layout that shall align contents vertically-->
+        android:layout_margin="24dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/primaryLightColor"
+        app:cardBackgroundColor="@color/surfaceColor">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="24dp"
             android:orientation="vertical">
-<!--            Below is the email EditText-->
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="📧 Enter Email Address"
-                android:textColorHint="#000"
-                android:id="@+id/email"
-                android:textColor="#000"
-                android:layout_margin="8dp"
-                android:background="#567"
-                android:padding="11dp"
-                android:inputType="textEmailAddress"/>
-
-<!--            Below is the password EditText-->
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="🔑 Enter Your Password"
-                android:textColorHint="#000"
-                android:id="@+id/password"
-                android:textColor="#000"
-                android:layout_margin="8dp"
-                android:background="#567"
-                android:padding="11dp"
-                android:inputType="textPassword"/>
-
-<!--            Below is the signin button-->
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="30dp"
-                android:padding="10dp"
-
-                android:text="🧑‍✈️ SIGNIN"
-                android:textColor="#03A9F4"
-                android:textSize="25sp"
-                android:backgroundTint="#222424"
-                android:id="@+id/signinBtn"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in to continue"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Email Address"
+                app:hintTextColor="@color/hintColor"
+                android:textColorHint="@color/hintColor"
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                app:startIconTint="@color/hintColor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/primaryTextColor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Password"
+                app:hintTextColor="@color/hintColor"
+                android:textColorHint="@color/hintColor"
+                app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                app:startIconTint="@color/hintColor"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/hintColor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/primaryTextColor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="SIGN IN"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="@color/whiteTextColor"
+                app:elevation="4dp"/>
+
+            <TextView
+                android:id="@+id/signuptxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/signup_text"
                 android:textAlignment="center"
-                android:textSize="23sp"
-                android:layout_marginTop="25dp"
-                android:textColor="#7f8cff"
-                android:id="@+id/signuptxt"/>
-
-
+                android:textSize="15sp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/accentBlue"
+                android:textStyle="bold"/>
 
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

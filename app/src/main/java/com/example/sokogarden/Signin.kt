@@ -2,11 +2,13 @@ package com.example.sokogarden
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.loopj.android.http.RequestParams
@@ -21,6 +23,12 @@ class Signin : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Apply Animation to CardView
+        val signinCard = findViewById<CardView>(R.id.signinCard)
+        val slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up)
+        signinCard.startAnimation(slideUp)
+
 //        Find the two EditText, a button and a text view by usr of their ids
         val email = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
@@ -35,7 +43,7 @@ class Signin : AppCompatActivity() {
 //        On click of the button sign in , we need to interact with our api endpoint, as we pass the two data info, email and password
         signinButton.setOnClickListener {
 //          Specify the API endpoint
-            val api = "https://kbenkamotho.alwaysdata.net/api/signin"
+            val api = "http://calebtonny.alwaysdata.net/api/signin"
 //            create a RequestParams that will enable you to hold data in form of a bundle/package
             val data = RequestParams()
 
