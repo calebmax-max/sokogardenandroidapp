@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.loopj.android.http.RequestParams
 
 class Signup : AppCompatActivity() {
+    lateinit var responseText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
