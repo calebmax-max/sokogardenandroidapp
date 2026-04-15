@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -68,7 +68,8 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:src="@android:drawable/ic_menu_search"
-                        app:tint="@color/primaryColor"/>
+                        app:tint="@color/primaryColor"
+                        android:contentDescription="Search"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -116,7 +117,8 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:src="@android:drawable/ic_input_add"
-                        app:tint="@color/accentBlue"/>
+                        app:tint="@color/accentBlue"
+                        android:contentDescription="Add"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -164,7 +166,8 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:src="@android:drawable/ic_menu_mylocation"
-                        app:tint="@color/accentGold"/>
+                        app:tint="@color/accentGold"
+                        android:contentDescription="Location"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -228,5 +231,20 @@
                 android:textStyle="bold"/>
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/single_item"
+            android:layout_marginBottom="20dp"/>
+
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
