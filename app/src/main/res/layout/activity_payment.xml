@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".PaymentActivity">
+
+<!--    Below is a textView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Payment with M-Pesa"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#2B762E"/>
+<!--    Below is card view that holds all our  contents-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="15dp">
+
+<!--        Below is a linear layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#369B69"
+            android:orientation="vertical"
+            android:padding="12dp">
+<!--     Below is a textview where the name of the product shall be attached/binded       -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProductName"
+                android:text="Product Name"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:textColor="#4B0CBA"/>
+
+<!--            Below is an image view for the product Image-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/imgProduct"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+<!--            Below is a textview for the product_cost-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProductCost"
+                android:text="Kes 1000"
+                android:textSize="30sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#FFEB3B"/>
+<!--            Below is editText for entering mobile number-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:hint="Enter Phone Number e.g 254XXXXXXXX"
+                android:textColorHint="@color/black"
+                android:inputType="phone"
+                android:textColor="#000"
+                android:padding="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#8C8888"/>
+
+<!--            Below is a button to complete the payment action-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pay"
+                android:text="Pay Now"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="75dp"
+                android:backgroundTint="#244724"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

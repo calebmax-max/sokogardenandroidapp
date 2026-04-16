@@ -3,6 +3,7 @@ package com.example.sokogarden
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +26,7 @@ class ProductAdapter(private val productList: List<Product>) :
         val txtDesc: TextView = itemView.findViewById(R.id.product_description)
         val txtPrice: TextView = itemView.findViewById(R.id.product_cost)
         val imgProduct: ImageView = itemView.findViewById(R.id.product_photo)
-//        val btnPurchase: TextView = itemView.findViewById(R.id.purchase)
+        val btnPurchase: Button = itemView.findViewById(R.id.btnPurchase)
     }
     //Access the Layout - Single Item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -50,19 +51,19 @@ class ProductAdapter(private val productList: List<Product>) :
             .into(holder.imgProduct)
  
                 //Handle Purchase Button Listener
-//                holder.btnPurchase.setOnClickListener {
-//                    val context = holder.itemView.context
-//                    val intent = android.content.Intent(context, PaymentActivity::class.java).apply {
-//                        putExtra("product_id", product.product_id)
-//                        putExtra("product_name", product.product_name)
-//                        putExtra("product_description", product.product_description)
-//                        putExtra("product_cost", product.product_cost)
-//                        putExtra("product_photo", product.product_photo)
-//                    }
-//                    context.startActivity(intent)
-//                }
+                holder.btnPurchase.setOnClickListener {
+                    val context = holder.itemView.context
+                    val intent = android.content.Intent(context, PaymentActivity::class.java).apply {
+                        putExtra("product_id", product.product_id)
+                        putExtra("product_name", product.product_name)
+                        putExtra("product_description", product.product_description)
+                        putExtra("product_cost", product.product_cost)
+                        putExtra("product_photo", product.product_photo)
+                    }
+                    context.startActivity(intent)
+                }
     }
- 
+
     override fun getItemCount(): Int = productList.size
    //Return all products Details as a LIST
     companion object {
