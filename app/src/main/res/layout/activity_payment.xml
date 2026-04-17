@@ -69,6 +69,17 @@
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="#FFEB3B"/>
+
+<!--            Below is a textview for the product_description-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProductDescription"
+                android:text="Product Description"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFFFFF"/>
+
 <!--            Below is editText for entering mobile number-->
             <EditText
                 android:layout_width="match_parent"

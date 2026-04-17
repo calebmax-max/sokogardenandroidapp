@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sokogarden">
         <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
             android:name=".PaymentActivity"
             android:exported="false" />
         <activity

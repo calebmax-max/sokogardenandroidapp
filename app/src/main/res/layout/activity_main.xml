@@ -212,6 +212,7 @@
                 android:layout_margin="8dp"
                 android:padding="16dp"
                 android:text="SIGNUP"
+
                 app:cornerRadius="12dp"
                 android:textColor="@color/whiteTextColor"
                 android:backgroundTint="@color/primaryColor"
@@ -225,6 +226,19 @@
                 android:layout_margin="8dp"
                 android:padding="16dp"
                 android:text="SIGNIN"
+                app:cornerRadius="12dp"
+                android:textColor="@color/whiteTextColor"
+                android:backgroundTint="@color/accentBlue"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/aboutbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:text="📜 About"
                 app:cornerRadius="12dp"
                 android:textColor="@color/whiteTextColor"
                 android:backgroundTint="@color/accentBlue"

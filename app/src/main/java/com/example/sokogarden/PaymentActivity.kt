@@ -26,16 +26,19 @@ class PaymentActivity : AppCompatActivity() {
         val txtname = findViewById<TextView>(R.id.txtProductName)
         val imgProduct = findViewById<ImageView>(R.id.imgProduct)
         val txtcost = findViewById<TextView>(R.id.txtProductCost)
+        val txtDescription = findViewById<TextView>(R.id.txtProductDescription)
 
 
 //        Retrive the  data passed from the previous activity
         val name = intent.getStringExtra("product_name")
         val cost = intent.getIntExtra("product_cost", 0)
+        val description = intent.getStringExtra("product_description")
         val product_photo = intent.getStringExtra("product_photo")
 
 //        update the textviews with the data passed from the previous activity
         txtname.text = name
         txtcost.text = "Kes $cost"
+        txtDescription.text = description
 
 //        Specify the image url - Fixed the URL syntax
         val imageUrl = "https://kbenkamotho.alwaysdata.net/static/images/$product_photo"
@@ -52,7 +55,7 @@ class PaymentActivity : AppCompatActivity() {
 //        set click listener
         btnpay.setOnClickListener {
 //            Specify the api endpoint for the payment
-            val api = "https://calebtonny.alwaysdata.net/api/mpesa_payment"
+            val api = "https://kbenkamotho.alwaysdata.net/api/mpesa_payment                                        "
 //             create a request params
             val data = RequestParams()
 

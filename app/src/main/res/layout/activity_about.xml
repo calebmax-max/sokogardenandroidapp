@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".About">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:fontFamily="cursive"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:background="@drawable/shape"
+        android:elevation="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/whiteTextColor"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/surfaceColor"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/primaryLightColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/aboutTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to SokoGarden, your premier destination for fresh, organic produce. We are a simple, user-friendly platform designed to make online shopping easy and accessible for everyone. \n\nUsers can quickly create accounts, securely login, and browse a wide range of products with detailed descriptions and photos. Our seamless checkout allows customers to pay conveniently via M-Pesa. \n\nWe are committed to supporting local farmers and providing you with the best harvest from our garden to your doorstep."
+                android:textSize="17sp"
+                android:textColor="@color/secondaryTextColor"
+                android:lineSpacingExtra="4dp"
+                android:textAlignment="viewStart"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:id="@+id/btnListen"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="🎙️ Know Us"
+                android:textSize="25sp"
+                android:backgroundTint="#244724"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
