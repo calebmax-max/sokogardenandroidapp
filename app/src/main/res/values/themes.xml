@@ -2,8 +2,17 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Sokogarden" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/white</item>
     </style>
 
     <style name="Theme.Sokogarden" parent="Base.Theme.Sokogarden" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.Sokogarden.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primaryColor</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/sokogarden</item>
+        <item name="postSplashScreenTheme">@style/Theme.Sokogarden</item>
+    </style>
 </resources>
